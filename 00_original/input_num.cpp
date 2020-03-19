@@ -8,6 +8,7 @@ using namespace std;
 入力変数の量が未知の場合
 [処理内容]
 stringで入力して任意の文字で分割してvectorで保存
+※スペースは0扱いになる
 -------------------------*/
 
 int main(){
@@ -17,7 +18,7 @@ int main(){
 
     stringstream ss{input_s};
 
-    while(getline(ss, s, ',')){
+    while(getline(ss, s, ' ')){
         input_v.push_back(atoi(s.c_str()));
     }
 
